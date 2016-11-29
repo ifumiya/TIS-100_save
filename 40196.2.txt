@@ -1,5 +1,7 @@
 @0
-
+#TOP CENTER
+# R = U != 0
+#    -999 ? 1
 
 @1
 A:MOV UP ACC
@@ -26,7 +28,12 @@ A:ADD LEFT
   MOV ACC DOWN
 
 @6
-
+# IF (IN != 0)
+#  RESET WITH
+#    OVERFLOW
+# IF (IN = 1)
+#  X += 1
+# OUT = X > 2 ?1:2
 
 @7
 

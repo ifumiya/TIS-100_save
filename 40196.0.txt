@@ -1,5 +1,6 @@
 @0
-
+# DOWN =
+#  UP == 0 ? 1 : 0
 
 @1
 START:
@@ -15,7 +16,11 @@ JMP START
 
 
 @3
-
+# IF (UP == 0)
+#  X = 0
+# ELSE
+#  X ++
+# DOWN = X
 
 @4
 MOV UP ACC
@@ -33,7 +38,8 @@ SWP
 
 
 @7
-
+# DOWN =
+#  UP >= 3 ? 1 : 0
 
 @8
 START:

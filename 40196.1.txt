@@ -1,5 +1,9 @@
 @0
-
+# IF (UP = 0)
+#  X += 1
+# ELSE
+#  X = 0
+# DOWN = X
 
 @1
 B:MOV UP ACC
@@ -17,7 +21,8 @@ A:SWP
 
 
 @3
-
+# LEFT =
+#  UP >= 3 ? 1 : 0
 
 @4
 C:MOV UP ACC
