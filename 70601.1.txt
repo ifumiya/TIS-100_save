@@ -1,0 +1,51 @@
+@0
+
+
+@1
+MOV UP ACC
+SWP
+MOV UP ACC
+SWP
+A:SUB 1
+SWP
+MOV ACC DOWN
+SWP
+JNZ A
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+MOV 0 DOWN
+MOV RIGHT DOWN
+MOV 30 ACC
+C:
+MOV UP DOWN
+SUB 1
+JNZ C
+MOV -1 DOWN
+
+@6
+MOV ACC LEFT
+ADD 1
+
+@7
+
+
+@8
+
+
+@9
+MOV UP RIGHT
+
+@10
+MOV LEFT DOWN
+
+@11
+

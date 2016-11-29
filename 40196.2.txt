@@ -1,0 +1,46 @@
+@0
+
+
+@1
+A:MOV UP ACC
+  JEZ B
+  MOV -999 RIGHT
+  JMP A
+B:MOV 1 RIGHT
+
+@2
+  MOV -999 ACC
+A:ADD LEFT
+  MOV ACC DOWN
+  JMP A
+
+@3
+
+
+@4
+
+
+@5
+  MOV UP ACC
+  ADD 999
+  MOV ACC DOWN
+
+@6
+
+
+@7
+
+
+@8
+
+
+@9
+A:MOV UP ACC
+  SUB 2
+  JGZ B
+  MOV 0 DOWN
+  JMP A
+B:MOV 1 DOWN
+
+@10
+
