@@ -1,53 +1,56 @@
 @0
-#TOP CENTER
-# R = U != 0
-#    -999 ? 1
-
-@1
-A:MOV UP ACC
-  JEZ B
-  MOV -999 RIGHT
-  JMP A
-B:MOV 1 RIGHT
-
-@2
-  MOV -999 ACC
-A:ADD LEFT
+  MOV 1 ACC
+  SAV
+A:MOV RIGHT ACC
+  SWP
   MOV ACC DOWN
   JMP A
 
-@3
+@1
+MOV UP ACC
+MOV ACC RIGHT
+MOV ACC LEFT
 
+@2
+MOV LEFT DOWN
+
+@3
+  MOV 1 ACC
+  SAV
+A:MOV UP ACC
+  SWP
+  MOV ACC DOWN
+  JMP A
 
 @4
 
 
 @5
-  MOV UP ACC
-  ADD 999
-  MOV ACC DOWN
+MOV UP DOWN
 
 @6
-# IF (IN != 0)
-#  RESET WITH
-#    OVERFLOW
-# IF (IN = 1)
-#  X += 1
-# OUT = X > 2 ?1:2
+
 
 @7
-
+  MOV 1 ACC
+  SAV
+A:MOV UP ACC
+  SWP
+  MOV ACC RIGHT
+  JMP A
 
 @8
-
+MOV LEFT RIGHT
 
 @9
-A:MOV UP ACC
-  SUB 2
-  JGZ B
+  ADD -3
+A:ADD LEFT
+  SUB UP
+  JEZ B
   MOV 0 DOWN
   JMP A
 B:MOV 1 DOWN
+  JMP A
 
 @10
 
