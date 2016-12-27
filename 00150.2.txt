@@ -1,0 +1,23 @@
+@0
+MOV UP, DOWN
+
+@1
+HCF
+
+@2
+
+
+@3
+MOV UP, DOWN
+
+@4
+
+
+@5
+MOV UP, DOWN
+
+@6
+
+
+@7
+
