@@ -1,0 +1,50 @@
+@0
+
+
+@1
+
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+  MOV 18 ACC
+A:SUB 1
+  MOV 1   DOWN
+  MOV ACC DOWN
+  SUB 1
+  MOV 0   DOWN
+  MOV ACC DOWN
+  JNZ A
+
+@6
+#1416
+
+@7
+
+
+@8
+
+
+@9
+  MOV UP DOWN
+  MOV UP DOWN
+  MOV 5 ACC
+A:SUB 1
+  MOV 3  DOWN
+  MOV 0  DOWN
+  MOV 3  DOWN
+  MOV 0  DOWN
+  MOV 3  DOWN
+  MOV 0  DOWN
+  JNZ A
+  MOV -1 DOWN
+
+@10
+
