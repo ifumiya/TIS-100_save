@@ -1,0 +1,64 @@
+@0
+  MOV RIGHT ACC
+  SWP
+  MOV RIGHT ACC
+
+A:SWP
+  MOV ACC   RIGHT
+  SWP
+  SUB 1
+  JNZ A
+
+@1
+  MOV 1     ACC
+  SWP
+  MOV UP    LEFT
+  MOV RIGHT ACC
+  MOV ACC   LEFT
+A:SWP
+  MOV ACC   DOWN
+  MOV LEFT  DOWN
+  MOV DOWN  ACC
+  SWP
+  SUB 1
+  JNZ A
+  SWP
+  MOV ACC    RIGHT
+
+@2
+  MOV UP   LEFT
+  MOV LEFT DOWN
+
+@3
+
+
+@4
+  MOV UP  DOWN
+  MOV UP  ACC
+  MOV ACC DOWN
+A:SWP
+  ADD DOWN
+  SWP
+  SUB 1
+  JNZ A
+  SWP
+  MOV ACC  UP
+
+@5
+  MOV UP DOWN
+
+@6
+  MOV UP ACC
+  SWP
+  MOV UP ACC
+A:SWP
+  MOV ACC UP
+  SWP
+  SUB 1
+  JNZ A
+
+@7
+  MOV UP DOWN
+
+@8
+
