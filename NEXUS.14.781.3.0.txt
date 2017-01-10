@@ -1,26 +1,99 @@
 @0
-
+C:MOV 10  ACC
+A:SUB 1
+  SWP
+  MOV UP  ACC
+  JEZ B
+  MOV ACC DOWN
+  SWP
+  JNZ A
+  JMP C
+B:SWP
+  ADD 1
+D:MOV 0 DOWN
+  SUB 1
+  JNZ D
 
 @1
 
 
 @2
-
+A:MOV RIGHT ACC
+  ADD 1
+  ADD ACC
+  JRO ACC
+  NOP
+  MOV 0    RIGHT
+  JMP A
+  MOV 10   RIGHT
+  JMP A
+  MOV 9    RIGHT
+  JMP A
+  MOV 6    RIGHT
+  JMP A
+  MOV 14   RIGHT
+  JMP A
 
 @3
-
+  MOV UP   LEFT
+  MOV LEFT DOWN
+  MOV 8 DOWN
+  MOV 8 DOWN
+  MOV 4 DOWN
+  MOV 4 DOWN
+  MOV 2 DOWN
+  MOV 2 DOWN
+  MOV 1 DOWN
+  MOV 1 DOWN
 
 @4
-
+  MOV 10 ACC
+A:SUB 1
+  SWP #---
+  MOV ACC DOWN
+  ADD 1
+  MOV ACC DOWN
+  SUB 1
+  SWP #---
+  JNZ A
+  SWP
+  ADD 3
+  SWP
 
 @5
 
 
 @6
-
+  MOV UP ACC
+  SWP #--------
+  MOV 4  ACC
+A:SWP #--------
+  SUB UP
+  JLZ B
+  MOV UP NIL
+  MOV 3  RIGHT
+  JMP C
+B:ADD UP
+  MOV 0  RIGHT
+C:SWP #-------
+  SUB 1
+  JNZ A
 
 @7
-
+  MOV RIGHT DOWN
+  MOV UP    DOWN
+  MOV LEFT  DOWN
+  MOV LEFT  DOWN
+  MOV -1    DOWN
 
 @8
-
+  MOV 10 ACC
+A:SUB 1
+  SWP #---
+  MOV ACC LEFT
+  MOV ACC LEFT
+  ADD 3
+  SWP #---
+  JNZ A
+  MOV 0 ACC
+  SAV
