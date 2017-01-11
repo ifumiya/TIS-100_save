@@ -1,0 +1,90 @@
+@0
+
+
+@1
+A:MOV RIGHT ACC
+  JEZ B
+  MOV UP    RIGHT
+
+@2
+A:MOV UP  ACC
+  JEZ B
+  SUB 1
+  JEZ C
+  SUB 1
+  MOV ACC DOWN
+  JMP A
+B:MOV LEFT 0
+  JMP A
+C:MOV LEFT 1
+  MOV LEFT RIGHT
+  JMP A
+
+@3
+
+
+@4
+# P , Q
+#  0 STORE
+#  1 LOAD
+# -1 ADD
+
+@5
+#  P
+A:MOV ANY ACC
+  JEZ B
+  JLZ C
+  SWP #-------
+  MOV ACC ANY
+  SWP #------
+  JMP A
+B:SWP #------
+  MOV ANY ACC
+  SWP #-----
+  JMP A
+C:SWP #-----
+  ADD ANY
+  SWP
+
+@6
+A:MOV UP ACC
+  JLZ B
+  JEZ B
+  MOV 0     DOWN
+B:MOV 0     LEFT
+  MOV LEFT  ACC
+  MOV 0     RIGHT
+  MOV 1     LEFT
+  MOV RIGHT LEFT
+  MOV 1     RIGHT
+  MOV ACC   RIGHT
+  JMP A
+C:MOV -1    LEFT
+  MOV  1    RIGHT
+  MOV RIGHT LEFT
+
+@7
+#  Q
+A:MOV ANY ACC
+  JEZ B
+  JLZ C
+  SWP #-------
+  MOV ACC ANY
+  SWP #------
+  JMP A
+B:SWP #------
+  MOV ANY ACC
+  SWP #-----
+  JMP A
+C:SWP #-----
+  ADD ANY
+  SWP
+
+@8
+
+
+@9
+
+
+@10
+
