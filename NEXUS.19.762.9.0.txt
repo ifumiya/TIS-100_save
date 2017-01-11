@@ -1,0 +1,74 @@
+@0
+  MOV UP  ACC
+  ADD 1
+  MOV ACC DOWN
+
+@1
+
+
+@2
+  MOV DOWN RIGHT
+
+@3
+  MOV LEFT  NIL
+A:MOV RIGHT ACC
+  SAV
+B:SUB 1
+  MOV DOWN  UP
+  JNZ B
+  MOV DOWN  ACC
+  ADD 1
+  MOV ACC   DOWN
+  SWP
+C:SUB 1
+  MOV UP    DOWN
+  JNZ C
+  JMP A
+
+@4
+B:MOV UP  ACC
+  JEZ A
+  MOV ACC LEFT
+  SAV
+  JMP B
+A:SWP
+  ADD ACC
+C:SUB 1   #SYNC
+  NOP
+  NOP
+  NOP
+  JNZ C
+  MOV NIL DOWN
+  JRO 0
+
+@5
+
+
+@6
+  MOV -1 RIGHT
+  MOV 11 ACC
+A:SUB 1
+  MOV 0  RIGHT
+  JNZ A
+  MOV 0  UP
+  JRO 0
+
+@7
+  MOV UP    NIL
+  MOV LEFT  NIL
+A:MOV LEFT  ACC
+  JLZ D
+B:JEZ C
+  SUB 1
+  SWP
+  MOV ACC   DOWN
+  SWP
+  JMP B
+C:SWP
+  ADD 1
+  SWP
+  JMP A
+D:MOV -1    DOWN
+
+@8
+

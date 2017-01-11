@@ -1,0 +1,36 @@
+@0
+A:MOV UP ACC
+  JLZ B
+  NEG
+  ADD 9
+  JEZ C
+  MOV ACC RIGHT
+  JMP A
+C:SWP
+  ADD 1
+  SWP
+  JMP A
+
+@1
+
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+
+
+@6
+
+
+@7
+
+
+@8
+
